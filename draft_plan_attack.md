@@ -15,7 +15,12 @@
     * 30 lessons with assignments
 * Designing neural networks through neuroevolution [Stanley et al 2019]
 * Lehman_survey 2018
-* PATHNET (Multitask learning)
+* PATHNET (Multitask learning) **This paper could be useful for me to get an idea of what I need to do**
+    * Learn simple skills
+        * Define useful skills
+    * Improve PATHNET
+    * It originally used a simple Evolutionary algorithm
+
 * GECCO submissions (2018 - 2019)
 * Evolutionary robotics - MITPress 2000
 * Evolutionary robotics from algorithms - Wang 2006
@@ -25,6 +30,27 @@
     * Ground
     * Air
 * Person following
+    * PID to regulate the distance between the person/object
+    * Generalize the problem by using simple behaviors to achieve the complex task
+        * Define simple dynamics to move, navigate, avoid, and follow     
+
+* Drones (tracking)
+    * speed up waypoint
+    * tracking
+    * collision avoidance
+    * Combine different policies
+        * Hierarchical reinforcement learning
+    * Complex aerial skills/tricks
+        * Learn simple skills
+            * up
+            * down
+            * front
+            * back
+            * side
+            * rotate
+        * Learn to compose advance movements from simple movements
+            * This does not exist
+            * Learn to generalize faster  
 
 # Estimated timeline
 * 01.04 - 30.04
