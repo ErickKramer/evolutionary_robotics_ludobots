@@ -2,6 +2,11 @@ import pyrosim
 import numpy as np
 import matplotlib.pyplot as plt
 
+'''
+Instructions: 
+https://www.reddit.com/r/ludobots/wiki/pyrosim/neurons
+'''
+
 sim = pyrosim.Simulator(play_paused=True,
                         window_size=(1900,1080))
 
@@ -74,10 +79,21 @@ ray_1 = sim.send_ray_sensor(body_id=redObject,
                             r2=0.,
                             r3=-1.)
 
-print('=================================================')
+# Adding neuron to capture the data coming from the touch sensors
+sensor_neuron_0 = sim.send_sensor_neuron(sensor_id=touch_0)
+sensor_neuron_1 = sim.send_sensor_neuron(sensor_id=touch_1)
+
+# Add motor neuron
+# Motor neurons are attached to joints and passes its value along
+# The motor neurons control the rotation of the joint
+motor_neuron_joint = sim.send_motor_neuron(joint_id=joint)
+
+#----------------------------------------------------------------------------------
 # Starts simulation
 sim.start()
 sim.wait_to_finish()
+
+## Ploting the data
 
 # Recollect information of the first sensor
 sensor_data_t0 = sim.get_sensor_data( sensor_id = touch_0 )
