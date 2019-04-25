@@ -52,6 +52,11 @@
             * This does not exist
             * Learn to generalize faster  
 
+* Look into Continuous-time recurrent neural network
+    * Can be used to model behaviors in robots
+
+* Simple blocks of actions are known as motor primitives 
+
 # Estimated timeline
 * 01.04 - 30.04
 
