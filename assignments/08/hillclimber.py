@@ -13,6 +13,7 @@ Blue diamond is the y coordinate
 '''
 
 plot_flag = True
+visualize_best = True
 fitness_robots = []
 
 parent = INDIVIDUAL()
@@ -36,6 +37,9 @@ for i in range(100):
         f.close()
     else:
         fitness_robots.append(parent.fitness)
+
+if visualize_best:
+    parent.evaluate(blind_mode=False)
 
 ## Ploting the data
 if plot_flag == True:
